@@ -3,9 +3,9 @@ import { Joke } from './joke'
 
 
 @Component({
-  selector: 'liked-jokes',
+  selector: 'app-jokes',
   template: `
-    <h1>Liked</h1>
+    <h1>{{componentName}}</h1>
     <ul>
       <li *ngFor="let joke of jokes">
         {{joke}}
@@ -20,6 +20,7 @@ import { Joke } from './joke'
   `]
 })
 
-export class LikedJokesComponent {
+export class JokesComponent {
   @Input() jokes: Joke[]
+  @Input() componentName: string
 }

@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeroComponent } from './hero.component';
-import { LikedJokesComponent } from './liked-jokes.component';
-import { DislikedJokesComponent } from './disliked-jokes.component';
+import { JokesComponent } from './jokes.component';
 
 import { ApiClientService } from './api-client.service'
 
@@ -12,8 +11,7 @@ import { ApiClientService } from './api-client.service'
   declarations: [
     AppComponent,
     HeroComponent,
-    LikedJokesComponent,
-    DislikedJokesComponent,
+    JokesComponent
   ],
   imports: [
     BrowserModule

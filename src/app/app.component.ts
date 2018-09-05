@@ -3,7 +3,7 @@ import { Joke } from './joke'
 
 @Component({
   selector: 'app-root',
-  template: `
+  template: `    
     <div class='container'>
       <h1>Jokes</h1>
       <hero 
@@ -11,12 +11,18 @@ import { Joke } from './joke'
         (dislikedJoke) = "onDisliked($event)">
       </hero>
       <div class= 'wrapper'>
-        <liked-jokes [jokes]="likedJokes"></liked-jokes>
-        <disliked-jokes [jokes]="disLikedJokes"></disliked-jokes>
+        <app-jokes 
+          [componentName]="'Liked Jokes'" 
+          [jokes]="likedJokes"
+        ></app-jokes>
+        <app-jokes 
+          [componentName]="'Disliked Jokes'" 
+          [jokes]="disLikedJokes"
+        ></app-jokes>
       </div>
     </div>
   `,
-  styles: [ `
+  styles: [`
     .container {
       display: flex;
       flex-direction: column;
@@ -25,7 +31,7 @@ import { Joke } from './joke'
        display: flex;
        background-color: navy;
     }
-  `]  
+  `]
 })
 export class AppComponent {
   likedJokes: Joke[] = []
